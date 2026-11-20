@@ -1,0 +1,176 @@
+@import "../../_globalColor";
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.demo-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: $titleColor;
+  margin-bottom: 12px;
+}
+
+.demo-subtitle {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+.demo-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  padding: 22px;
+  background: linear-gradient(160deg, rgba(85, 25, 139, 0.06), rgba(100, 91, 235, 0.03));
+  border: 1px solid $lightBorder1;
+  box-shadow: 0 6px 18px $lightBoxShadow;
+
+  &.dark-mode {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.demo-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.demo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $buttonColor;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.demo-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $titleColor;
+
+  .dark-mode & {
+    color: $textColorDark;
+  }
+}
+
+.demo-desc {
+  margin: 0 0 14px 0;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: $cardSubtitle;
+
+  .dark-mode & {
+    color: rgba(255, 255, 255, 0.72);
+  }
+}
+
+.demo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.demo-tag {
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(100, 91, 235, 0.14);
+  color: $skillsColor;
+
+  .dark-mode & {
+    background: rgba(183, 156, 255, 0.16);
+    color: #cbb8ff;
+  }
+}
+
+.demo-account {
+  margin: 0 0 14px 0;
+  font-size: 0.82rem;
+  color: $subTitle;
+}
+
+.demo-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  i {
+    font-size: 0.7rem;
+  }
+}
+
+.demo-btn-primary {
+  background: $buttonColor;
+  color: #fff;
+
+  &:hover {
+    background: $buttonHover;
+  }
+}
+
+.demo-btn-ghost {
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
+
+  &:hover {
+    background: rgba(85, 25, 139, 0.08);
+  }
+
+  .dark-mode & {
+    border-color: #b79cff;
+    color: #b79cff;
+  }
+}
+
+.demo-tip {
+  margin-top: 18px;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: $subTitle;
+
+  code {
+    background: rgba(100, 91, 235, 0.12);
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin: 0 2px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .demo-title {
+    font-size: 1.7rem;
+  }
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /profile.json
+Disallow: /blogs.json
+
+Sitemap: https://your-domain.com/sitemap.xml

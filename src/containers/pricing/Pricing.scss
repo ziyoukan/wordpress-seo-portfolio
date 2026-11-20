@@ -1,0 +1,249 @@
+@import "../../_globalColor";
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.pricing-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: $titleColor;
+  margin-bottom: 12px;
+}
+
+.pricing-subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 26px 24px;
+  background: $lightBackground1;
+  border: 1px solid $lightBorder1;
+  box-shadow: 0 6px 18px $lightBoxShadow;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px $lightBoxShadowDark;
+  }
+
+  &.dark-mode {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+  }
+}
+
+.pricing-card-highlight {
+  border: 2px solid $buttonColor;
+  box-shadow: 0 10px 26px rgba(85, 25, 139, 0.22);
+
+  &.dark-mode {
+    border-color: #b79cff;
+  }
+}
+
+.pricing-flag {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: $buttonColor;
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+}
+
+.pricing-name {
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $titleColor;
+
+  .dark-mode & {
+    color: $textColorDark;
+  }
+}
+
+.pricing-price {
+  margin: 0 0 4px 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: $buttonColor;
+
+  .dark-mode & {
+    color: #b79cff;
+  }
+}
+
+.pricing-cycle {
+  font-size: 0.78rem;
+  color: $subTitle;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.pricing-desc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: $cardSubtitle;
+  margin: 0 0 16px 0;
+
+  .dark-mode & {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px 0;
+  font-size: 0.86rem;
+  line-height: 1.9;
+  color: $cardSubtitle;
+
+  li {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  i {
+    color: #1e9b62;
+    font-size: 0.75rem;
+    margin-top: 7px;
+  }
+
+  .dark-mode & {
+    color: rgba(255, 255, 255, 0.75);
+
+    i {
+      color: #57e6a5;
+    }
+  }
+}
+
+.pricing-cta {
+  margin-top: auto;
+  text-align: center;
+  padding: 11px 0;
+  border-radius: 999px;
+  background: $buttonColor;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $buttonHover;
+  }
+}
+
+.pricing-addons {
+  margin-top: 30px;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid $lightBorder1;
+  background: $lightBackground3;
+
+  &.dark-mode {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.pricing-subhead {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $titleColor;
+
+  .dark-mode & {
+    color: $textColorDark;
+  }
+}
+
+.pricing-addon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.pricing-addon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: $lightBackground1;
+  border: 1px solid $lightBorder1;
+
+  .dark-mode & {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.pricing-addon-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pricing-addon-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $titleColor;
+
+  .dark-mode & {
+    color: $textColorDark;
+  }
+}
+
+.pricing-addon-note {
+  font-size: 0.76rem;
+  color: $subTitle;
+}
+
+.pricing-addon-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $buttonColor;
+  white-space: nowrap;
+
+  .dark-mode & {
+    color: #b79cff;
+  }
+}
+
+.pricing-notes {
+  margin: 18px 0 0 0;
+  padding-left: 18px;
+  font-size: 0.8rem;
+  line-height: 1.9;
+  color: $subTitle;
+}
+
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 1.7rem;
+  }
+}
